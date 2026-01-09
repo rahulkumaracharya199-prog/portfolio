@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skills | Rahul Kumar Acharya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-900 text-gray-200">
+
+    <!-- Navbar -->
+    <header class="flex items-center justify-between px-5 md:px-20 py-6">
+
+        <h1 class="text-2xl font-bold text-sky-400">
+            Rahul<span class="text-white"> Acharya</span>
+        </h1>
+
+        <!-- Desktop -->
+        <nav class="space-x-6 hidden md:block">
+            <a href="home.html" class="hover:text-sky-400">Home</a>
+            <a href="about.html" class="hover:text-sky-400">About</a>
+            <a href="skills.html" class="text-sky-400">Skills</a>
+            <a href="projects.html" class="hover:text-sky-400">Projects</a>
+            <a href="contact.html" class="hover:text-sky-400">Contact</a>
+        </nav>
+
+        <!-- Mobile -->
+        <button id="menu-btn" class="md:hidden text-3xl text-sky-400">
+            ☰
+        </button>
+    </header>
+
+    <!-- Mobile Dropdown -->
+    <nav id="mobile-menu"
+        class="hidden flex flex-col gap-4 bg-slate-800 p-5 text-center md:hidden">
+        <a href="home.html" class="hover:text-sky-400">Home</a>
+        <a href="about.html" class="hover:text-sky-400">About</a>
+        <a href="skills.html" class="hover:text-sky-400">Skills</a>
+        <a href="projects.html" class="hover:text-sky-400">Projects</a>
+        <a href="contact.html" class="hover:text-sky-400">Contact</a>
+    </nav>
+
+    <!-- Skills Section -->
+    <section class="px-5 md:px-20 mt-10">
+        <div class="max-w-6xl mx-auto w-full">
+
+            <!-- Title -->
+            <h2 class="text-4xl font-bold text-center mb-14">
+                My <span class="text-sky-400">Skills</span>
+            </h2>
+
+            <!-- Skills Grid -->
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+                <!-- Skill Card -->
+                <div class="bg-slate-800 rounded-2xl p-6 shadow-lg hover:-translate-y-2 transition">
+                    <h3 class="text-xl font-semibold text-sky-400 mb-2">HTML</h3>
+                    <p class="text-gray-400">
+                        Semantic markup, accessibility, SEO-friendly structure.
+                    </p>
+                </div>
+
+                <div class="bg-slate-800 rounded-2xl p-6 shadow-lg hover:-translate-y-2 transition">
+                    <h3 class="text-xl font-semibold text-sky-400 mb-2">CSS</h3>
+                    <p class="text-gray-400">
+                        Responsive layouts, Flexbox, Grid, animations.
+                    </p>
+                </div>
+
+                <div class="bg-slate-800 rounded-2xl p-6 shadow-lg hover:-translate-y-2 transition">
+                    <h3 class="text-xl font-semibold text-sky-400 mb-2">Tailwind CSS</h3>
+                    <p class="text-gray-400">
+                        Utility-first styling, rapid UI development.
+                    </p>
+                </div>
+
+                <div class="bg-slate-800 rounded-2xl p-6 shadow-lg hover:-translate-y-2 transition">
+                    <h3 class="text-xl font-semibold text-sky-400 mb-2">JavaScript</h3>
+                    <p class="text-gray-400">
+                        DOM manipulation, ES6+, async programming.
+                    </p>
+                </div>
+
+                <div class="bg-slate-800 rounded-2xl p-6 shadow-lg hover:-translate-y-2 transition">
+                    <h3 class="text-xl font-semibold text-sky-400 mb-2">React</h3>
+                    <p class="text-gray-400">
+                        Components, hooks, state management.
+                    </p>
+                </div>
+
+                <div class="bg-slate-800 rounded-2xl p-6 shadow-lg hover:-translate-y-2 transition">
+                    <h3 class="text-xl font-semibold text-sky-400 mb-2">Firebase</h3>
+                    <p class="text-gray-400">
+                        Authentication, Firestore, hosting basics.
+                    </p>
+                </div>
+
+                <div class="bg-slate-800 rounded-2xl p-6 shadow-lg hover:-translate-y-2 transition">
+                    <h3 class="text-xl font-semibold text-sky-400 mb-2">Python</h3>
+                    <p class="text-gray-400">
+                        Data analysis, web scraping, automation, Django.
+                    </p>
+                </div>
+
+                <div class="bg-slate-800 rounded-2xl p-6 shadow-lg hover:-translate-y-2 transition">
+                    <h3 class="text-xl font-semibold text-sky-400 mb-2">C Language</h3>
+                    <p class="text-gray-400">
+                        Algorithms, data structures, low-level programming.
+                    </p>
+                </div>
+
+                <div class="bg-slate-800 rounded-2xl p-6 shadow-lg hover:-translate-y-2 transition">
+                    <h3 class="text-xl font-semibold text-sky-400 mb-2">Django</h3>
+                    <p class="text-gray-400">
+                        Full-stack development, RESTful APIs, ORM, deployment.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 text-gray-500 bg-slate-950 mt-16">
+        © 2025 Rahul Kumar Acharya. All rights reserved.
+    </footer>
+
+    <!-- Mobile Toggle Script -->
+    <script>
+        const btn = document.getElementById("menu-btn");
+        const menu = document.getElementById("mobile-menu");
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+    </script>
+
+</body>
+</html>

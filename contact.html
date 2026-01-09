@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Rahul Kumar Acharya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- EmailJS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+
+<body class="bg-slate-900 text-gray-200">
+
+    <!-- Navbar -->
+    <header class="flex items-center justify-between px-5 md:px-20 py-6">
+        <h1 class="text-2xl font-bold text-sky-400">
+            Rahul<span class="text-white"> Acharya</span>
+        </h1>
+
+        <!-- Desktop -->
+        <nav class="space-x-6 hidden md:block">
+            <a href="home.html" class="hover:text-sky-400">Home</a>
+            <a href="about.html" class="hover:text-sky-400">About</a>
+            <a href="skills.html" class="hover:text-sky-400">Skills</a>
+            <a href="projects.html" class="hover:text-sky-400">Projects</a>
+            <a href="contact.html" class="text-sky-400">Contact</a>
+        </nav>
+
+        <!-- Mobile -->
+        <button id="menu-btn" class="md:hidden text-3xl text-sky-400">
+            ☰
+        </button>
+    </header>
+
+    <!-- Mobile Dropdown -->
+    <nav id="mobile-menu" class="hidden flex flex-col gap-4 bg-slate-800 p-5 text-center md:hidden">
+        <a href="home.html" class="hover:text-sky-400">Home</a>
+        <a href="about.html" class="hover:text-sky-400">About</a>
+        <a href="skills.html" class="hover:text-sky-400">Skills</a>
+        <a href="projects.html" class="hover:text-sky-400">Projects</a>
+        <a href="contact.html" class="hover:text-sky-400">Contact</a>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="px-5 md:px-20 py-9">
+        <div class="max-w-5xl mx-auto w-full">
+
+            <!-- Title -->
+            <h2 class="text-4xl font-bold text-center mb-12">
+                Contact <span class="text-sky-400">Me</span>
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-16 md:gap-28 items-center">
+
+                <!-- Left Info -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">
+                        Let’s Work Together
+                    </h3>
+
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Have a project, internship opportunity, or collaboration in mind?
+                        Feel free to contact me. I’m always open to learning and new opportunities.
+                    </p>
+
+                    <div class="space-y-4">
+                        <p>
+                            📧 <span class="text-gray-400">Email:</span><br />
+                            <span class="font-medium break-all">rahulkumaracharya199@gmail.com</span>
+                        </p>
+
+                        <p>
+                            📞 <span class="text-gray-400">Phone:</span><br />
+                            <span class="font-medium">7061638189</span>
+                        </p>
+
+                        <p>
+                            📍 <span class="text-gray-400">Location:</span><br />
+                            <span class="font-medium">Bihar, India</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-slate-800 rounded-2xl p-8 shadow-lg">
+                    <form id="contact-form" class="space-y-5">
+                        <input name="name" type="text" placeholder="Your Name" required
+                            class="w-full p-3 rounded bg-slate-900 text-gray-200 focus:outline-none focus:ring-2 focus:ring-sky-400" />
+
+                        <input name="email" type="email" placeholder="Your Email" required
+                            class="w-full p-3 rounded bg-slate-900 text-gray-200 focus:outline-none focus:ring-2 focus:ring-sky-400" />
+
+                        <textarea name="message" rows="5" placeholder="Your Message" required
+                            class="w-full p-3 rounded bg-slate-900 text-gray-200 focus:outline-none focus:ring-2 focus:ring-sky-400"></textarea>
+
+                        <button type="submit"
+                            class="w-full py-3 bg-sky-400 text-slate-900 rounded-full font-semibold hover:bg-sky-300 transition">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 text-gray-500 bg-slate-950">
+        © 2025 Rahul Kumar Acharya. All rights reserved.
+    </footer>
+
+    <!-- Mobile + Email Form Script -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById("menu-btn");
+        const menu = document.getElementById("mobile-menu");
+        btn.addEventListener("click", () => menu.classList.toggle("hidden"));
+
+        // EmailJS Init (PUT YOUR PUBLIC KEY)
+        emailjs.init("snvKLoLsnbQhYYZqB");
+
+        // Form Submit
+        document.getElementById("contact-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const form = this;
+
+            emailjs.sendForm("service_g4tzdmo", "template_48c1c6t", form)
+                .then(() => {
+                    alert("Message Sent Successfully! 😎");
+                    form.reset(); // 👈 clears name, email, message
+                })
+                .catch(() => {
+                    alert("Failed to send 😥 Try again!");
+                });
+        });
+
+    </script>
+
+</body>
+</html>
