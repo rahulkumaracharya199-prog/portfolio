@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certificates | Rahul Kumar Acharya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-gray-200">
+
+    <!-- Navbar -->
+    <header class="flex items-center justify-between px-5 md:px-20 py-6">
+
+        <h1 class="text-2xl font-bold text-sky-400">
+            Rahul<span class="text-white"> Acharya</span>
+        </h1>
+
+        <!-- Desktop Menu -->
+        <nav class="space-x-6 hidden md:block">
+            <a href="home.html" class="hover:text-sky-400">Home</a>
+            <a href="about.html" class="hover:text-sky-400">About</a>
+            <a href="skills.html" class="hover:text-sky-400">Skills</a>
+            <a href="projects.html" class="hover:text-sky-400">Projects</a>
+            <a href="certificates.html" class="text-sky-400">Certificates</a>
+            <a href="contact.html" class="hover:text-sky-400">Contact</a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden text-3xl text-sky-400">
+            ☰
+        </button>
+    </header>
+
+    <!-- Mobile Dropdown -->
+    <nav id="mobile-menu" class="hidden flex flex-col gap-4 bg-slate-800 p-5 text-center md:hidden">
+        <a href="home.html" class="hover:text-sky-400">Home</a>
+        <a href="about.html" class="hover:text-sky-400">About</a>
+        <a href="skills.html" class="hover:text-sky-400">Skills</a>
+        <a href="projects.html" class="hover:text-sky-400">Projects</a>
+        <a href="certificates.html" class="text-sky-400">Certificates</a>
+        <a href="contact.html" class="hover:text-sky-400">Contact</a>
+    </nav>
+
+    <!-- Certificates -->
+    <section class="px-6 md:px-20 py-10">
+        <h2 class="text-4xl font-bold text-center mb-14">
+            My <span class="text-sky-400">Certificates</span>
+        </h2>
+
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+            <!-- Add your images here -->
+            <div onclick="openImg('Images/1.jpg')"
+                class="bg-slate-800 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition">
+                <img src="Images/1.jpg" class="w-full h-[200px] sm:h-[240px] md:h-[280px] object-cover">
+            </div>
+
+            <div onclick="openImg('Images/2.jpg')"
+                class="bg-slate-800 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition">
+                <img src="Images/2.jpg" class="w-full h-[200px] sm:h-[240px] md:h-[280px] object-cover">
+            </div>
+
+            <div onclick="openImg('Images/3.jpg')"
+                class="bg-slate-800 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition">
+                <img src="Images/3.jpg" class="w-full h-[200px] sm:h-[240px] md:h-[280px] object-cover">
+            </div>
+
+            <div onclick="openImg('Images/4.jpg')"
+                class="bg-slate-800 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition">
+                <img src="Images/4.jpg" class="w-full h-[200px] sm:h-[240px] md:h-[280px] object-cover">
+            </div>
+
+            <div onclick="openImg('Images/5.jpg')"
+                class="bg-slate-800 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition">
+                <img src="Images/5.jpg" class="w-full h-[200px] sm:h-[240px] md:h-[280px] object-cover">
+            </div>
+
+            <div onclick="openImg('Images/6.jpg')"
+                class="bg-slate-800 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition">
+                <img src="Images/6.jpg" class="w-full h-[200px] sm:h-[240px] md:h-[280px] object-cover">
+            </div>
+
+            <div onclick="openImg('Images/7.jpg')"
+                class="bg-slate-800 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition">
+                <img src="Images/7.jpg" class="w-full h-[200px] sm:h-[240px] md:h-[280px] object-cover">
+            </div>
+
+            <div onclick="openImg('Images/8.jpg')"
+                class="bg-slate-800 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition">
+                <img src="Images/8.jpg" class="w-full h-[200px] sm:h-[240px] md:h-[280px] object-cover">
+            </div>
+
+            <div onclick="openImg('Images/9.jpg')"
+                class="bg-slate-800 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition">
+                <img src="Images/9.jpg" class="w-full h-[200px] sm:h-[240px] md:h-[280px] object-cover">
+            </div>
+
+            <!-- Add more the same way -->
+
+        </div>
+    </section>
+
+    <!-- Popup Modal -->
+    <div id="popup" class="fixed hidden inset-0 bg-black/80 flex items-center justify-center">
+        <img id="popup-img" class="max-w-[90%] max-h-[90%] rounded-lg shadow-lg">
+        <button onclick="closeImg()" class="absolute top-5 right-5 text-white text-3xl font-bold">✕</button>
+    </div>
+
+    <footer class="text-center py-6 text-gray-500 bg-slate-950">
+        © 2026 Rahul Kumar Acharya. All rights reserved.
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        menuBtn.addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
+
+        function openImg(src) {
+            document.getElementById('popup-img').src = src;
+            document.getElementById('popup').classList.remove('hidden');
+        }
+        function closeImg() {
+            document.getElementById('popup').classList.add('hidden');
+        }
+    </script>
+
+</body>
+</html>
