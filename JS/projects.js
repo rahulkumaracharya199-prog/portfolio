@@ -1,21 +1,27 @@
 const projects = [
     {
         title: "Swiggy Clone",
-        description: "Food delivery UI clone built using HTML, Tailwind CSS.",
+        description: "Swiggy UI clone built using HTML, Tailwind CSS.",
         image: "Images/Projects/1.png",
         github: "https://github.com/rahulkumaracharya199-prog/Swiggy-Clone"
     },
     {
         title: "Spotify Clone",
-        description: "Music streaming UI clone built using HTML, CSS.",
+        description: "Spotify UI clone built using HTML, CSS.",
         image: "Images/Projects/3.png",
         github: "https://github.com/rahulkumaracharya199-prog/SpotifyClone"
     },
     {
         title: "Amazon Clone",
-        description: "Responsive e-commerce UI built using HTML, CSS.",
+        description: "Amazon UI built using HTML, CSS.",
         image: "Images/Projects/2.png",
         github: "https://github.com/rahulkumaracharya199-prog/Amazon-Clone"
+    },
+    {
+        title: "Calculator",
+        description: "Responsive Calculator built using HTML, CSS, and JavaScript.",
+        image: "Images/Projects/4.png",
+        github: "https://github.com/rahulkumaracharya199-prog/calculator-web-project"
     }
 ];
 
@@ -34,7 +40,7 @@ projects.forEach(project => {
                     ${project.title}
                 </h3>
 
-                <p class="text-gray-400 mb-2 text-md">
+                <p class="text-gray-400 mb-2 text-md h-12">
                     ${project.description}
                 </p>
 
